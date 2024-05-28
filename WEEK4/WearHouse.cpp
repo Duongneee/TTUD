@@ -46,19 +46,20 @@ int main()
      memset(f, 0, sizeof(f));
 
     for(int i = 1; i <= N; i++){ // chạy lần lượt từng điểm 
-        for(int k = 0; k <= T ; k++){ // chạy lần lượt từ thời gian của điểm i cho tới thời gian max
-            f[i][k] = a[i]; // với thời gian còn lại là k thì số vàng lấy được là tại điểm đó
+        for(int k = 1; k <= T ; k++){ // chạy lần lượt từ thời gian của điểm i cho tới thời gian max
+            f[i][k] = a[i]; // với thời gian còn lại là k thì số hàng lấy được là tại điểm đó
             if( k < t[i] ) { // nếu thời gian còn lại nhỏ hơn thời gian cần
                 f[i][k] = 0; // thì hàng lấy được cho là 0
                 continue; 
             }
-            else {
-                for (int j = max(1, i - D); j <= i - 1; j++)
+           else {
+                for (int j = max(1, i - D); j <= i - 1; j++) // chỉ có thể chạy từ 1 hoặc từ 2 bước trước đo
                 {
-                    f[i][k] = max(f[i][k], f[j][k - t[i]] + a[i]);
+                    f[i][k] = max(f[i][k], f[j][k - t[i]] + a[i]); // giá trị sẽ là điểm đó hoặc là bằng điểm trước đó + giá trị tại điểm hiện tại
                 }
-            }
-        }   
+             }
+             cout << f[i][k] << " ";
+        }   cout << "\n";
     }
 
     int res = 0;

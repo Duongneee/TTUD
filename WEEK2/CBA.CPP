@@ -7,7 +7,7 @@ int res = 1000000, t[MAXIMUM] = {}, load[MAXIMUM] = {} ;
 // load: số môn học mà giáo viên dạy, t: lưu trữ giáo viên cho từng môn học
 int n, m;
 vector<int> t_can_t[MAXIMUM];   // Lưu trữ giáo viên có thể dạy môn học này.
-int dd[50][50];
+int dd[50][50];// danh sách xung đột
 
 // check giáo viên này có dạy được môn học này không
 bool check(int khoahoc, int giaovien) {

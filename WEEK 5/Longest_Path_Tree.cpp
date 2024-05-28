@@ -28,11 +28,11 @@ long u, v, w[MAX][MAX];
 vector<long> adj[MAX];
 long visited[MAX];
 
-void init(int v, vector<long> a) {
-    for(int i = 0; i < sizeof(a); i++) {
-        a[]
-    }
-}
+// void init(int v, vector<long> a) {
+//     for(int i = 0; i < sizeof(a); i++) {
+//         a[]
+//     }
+// }
 
 
 int main() 
