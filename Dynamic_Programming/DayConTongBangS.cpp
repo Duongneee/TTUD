@@ -19,7 +19,7 @@ int main()
 
     for(int i = 1; i <= n; i++) {
         for(int j = s; j >= a[i]; j--) {
-            if(dp[j - a[i]] = 1) {
+            if(dp[j - a[i]] == 1) {
                 dp[i] = 1;
             }
         }

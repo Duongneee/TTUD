@@ -53,7 +53,7 @@ void TRY(int k) {
         cout << 1 << endl;
         exit(0);
     }
-
+    
     for (int vo = 0; vo <= 1; vo++) {
         int wk, hk;
         if (vo == 0) {
@@ -63,7 +63,6 @@ void TRY(int k) {
             wk = hi[k];
             hk = wi[k];
         }
-
         for (int vx = 0; vx <= W - wk; vx++) {
             for (int vy = 0; vy <= H - hk; vy++) {
                 if (check(vx, vy, vo, k)) {

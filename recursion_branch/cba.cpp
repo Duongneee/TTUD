@@ -78,7 +78,7 @@ int up_ketqua() { // xem giáo viên nào có số lượng môn lớn nhất , 
     return res = min(max_load, res);
 }
 
- void TRY(int i) {
+ void TRY(int i) { // thử từng môn học
     for(int teacher : teacher_can_teach[i]) {
         if(check(i, teacher)) {
             t[i] = teacher;
